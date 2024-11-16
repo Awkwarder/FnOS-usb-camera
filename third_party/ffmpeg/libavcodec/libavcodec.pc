@@ -1,0 +1,14 @@
+prefix=output/cpu
+exec_prefix=${prefix}
+libdir=output/cpu/lib
+includedir=output/cpu/include
+
+Name: libavcodec
+Description: FFmpeg codec library
+Version: 61.24.100
+Requires: 
+Requires.private: libswresample >= 5.4.100, libavutil >= 59.46.100
+Conflicts:
+Libs: -L${libdir}  -lavcodec 
+Libs.private: -pthread -lm -latomic -lx264 -lx265 -lz -lva -lmfx -lstdc++ -ldl
+Cflags: -I${includedir}

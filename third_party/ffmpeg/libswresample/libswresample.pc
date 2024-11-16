@@ -1,0 +1,14 @@
+prefix=output/cpu
+exec_prefix=${prefix}
+libdir=output/cpu/lib
+includedir=output/cpu/include
+
+Name: libswresample
+Description: FFmpeg audio resampling library
+Version: 5.4.100
+Requires: 
+Requires.private: libavutil >= 59.46.100
+Conflicts:
+Libs: -L${libdir}  -lswresample 
+Libs.private: -lm -latomic
+Cflags: -I${includedir}
